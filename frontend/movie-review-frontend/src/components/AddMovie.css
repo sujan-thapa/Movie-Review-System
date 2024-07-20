@@ -1,0 +1,56 @@
+.add-movie {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-movie h2 {
+    margin-bottom: 20px;
+  }
+  
+  .add-movie input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-movie button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-movie button:hover {
+    background-color: #0056b3;
+  }
+  
+  .suggestions {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 0;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    background: white;
+  }
+  
+  .suggestions li:hover {
+    background: #f0f0f0;
+  }
+  
