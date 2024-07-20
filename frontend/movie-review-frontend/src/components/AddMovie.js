@@ -34,7 +34,8 @@ const AddMovie = ({ fetchMovies }) => {
           genre,
           director,
         }, {
-          headers: { 'Content-Type': 'application/json' }
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true
         });
         alert(response.data.message);
         fetchMovies(); // Refresh the movie list

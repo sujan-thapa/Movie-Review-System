@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1283292d-c52c-4ad3-91c0-e10a380b51e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/movie_review_system.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/add_review.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/check_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/cors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/delete_movie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/delete_review.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/fetch_and_add_movie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/update_review.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/view_movie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/view_movies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/view_reviews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/config/db_connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/sql/setup.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/AddMovie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/Home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/MovieDetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/AddMovie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/AddMovie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/AddReview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/DeleteReview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/Home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/MovieDetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/MovieDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/UpdateReview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/ViewReviews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/components/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/movie-review-frontend/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysqlshellcommands.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assignment 4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/mysql.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2jUELdOeX0JDMbPm7Run1VtnZpK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/user/Desktop/movie_review_system",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\movie_review_system\backend\api" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="DatabaseScript" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="setup.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/backend/sql/setup.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.setup.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PS-241.15989.102" />
+        <option value="bundled-php-predefined-ba97393d7c68-c76157a7178b-com.jetbrains.php.sharedIndexes-PS-241.15989.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1283292d-c52c-4ad3-91c0-e10a380b51e5" name="Changes" comment="" />
+      <created>1721433201885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721433201885</updated>
+      <workItem from="1721433203021" duration="10912000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="movie_review_system" type="b2602c69:ProjectViewProjectNode" />
+        <item name="dir{file://C:/Users/user/Desktop/movie_review_system}" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+</project>

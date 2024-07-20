@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "your_password"; // Replace 'your_password' with your MySQL root password
 $dbname = "movie_reviews";
 
 // Create connection

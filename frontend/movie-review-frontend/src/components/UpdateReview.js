@@ -10,7 +10,9 @@ const UpdateReview = () => {
     e.preventDefault();
     const reviewData = { review_id: reviewId, rating, comment };
     try {
-      const response = await axios.post('http://localhost/backend/api/update_review.php', reviewData);
+      const response = await axios.post('http://localhost/backend/api/update_review.php', reviewData, {
+        headers: { 'Content-Type': 'application/json' }
+      });
       alert(response.data.message);
     } catch (error) {
       alert(error.response.data.error);

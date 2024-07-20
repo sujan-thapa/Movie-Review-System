@@ -10,7 +10,7 @@ const MovieDetail = () => {
   const [reviewAction, setReviewAction] = useState('');
   const [reviewData, setReviewData] = useState({
     movieId: id,
-    userId: '',
+    username: '',
     rating: '',
     comment: '',
   });
@@ -53,7 +53,7 @@ const MovieDetail = () => {
       alert(response.data.message);
       setReviewData({
         movieId: id,
-        userId: '',
+        username: '',
         rating: '',
         comment: '',
       });
@@ -72,14 +72,14 @@ const MovieDetail = () => {
     if (review) {
       setReviewData({
         movieId: id,
-        userId: review.user_id,
+        username: review.username,
         rating: review.rating,
         comment: review.comment,
       });
     } else {
       setReviewData({
         movieId: id,
-        userId: '',
+        username: '',
         rating: '',
         comment: '',
       });
@@ -90,7 +90,7 @@ const MovieDetail = () => {
     setReviewAction('');
     setReviewData({
       movieId: id,
-      userId: '',
+      username: '',
       rating: '',
       comment: '',
     });
@@ -110,7 +110,7 @@ const MovieDetail = () => {
             {reviews.length ? (
               reviews.map((review) => (
                 <div key={review.review_id} className="review-item">
-                  <p>User: {review.user_id}</p>
+                  <p>User: {review.username}</p>
                   <p>Rating: {review.rating}</p>
                   <p>Comment: {review.comment}</p>
                   <button onClick={() => openReviewModal('update', review)}>Update Review</button>
@@ -130,11 +130,11 @@ const MovieDetail = () => {
             <h2>{reviewAction.charAt(0).toUpperCase() + reviewAction.slice(1)} Review</h2>
             <form onSubmit={handleReviewSubmit}>
               <label>
-                User ID:
+                Username:
                 <input
                   type="text"
-                  name="userId"
-                  value={reviewData.userId}
+                  name="username"
+                  value={reviewData.username}
                   onChange={handleReviewChange}
                 />
               </label>

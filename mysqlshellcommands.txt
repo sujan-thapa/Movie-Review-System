@@ -1,98 +1,45 @@
-MySQL Shell 8.0.37
+\sql
 
-Copyright (c) 2016, 2024, Oracle and/or its affiliates.
-Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
-Other names may be trademarks of their respective owners.
+\connect root@localhost
 
-Type '\help' or '\?' for help; '\quit' to exit.
- MySQL  JS > mysql -u root -p
-SyntaxError: Unexpected identifier 'root'
- MySQL  JS > \sql
-Switching to SQL mode... Commands end with ;
- MySQL  SQL > ^C
- MySQL  SQL > \connect root@localhost
-Creating a session to 'root@localhost'
-Please provide the password for 'root@localhost': ****
-Save password for 'root@localhost'? [Y]es/[N]o/Ne[v]er (default No): Y
-Fetching global names for auto-completion... Press ^C to stop.
-Your MySQL connection id is 8 (X protocol)
-Server version: 8.0.37 MySQL Community Server - GPL
-No default schema selected; type \use <schema> to set one.
- MySQL  localhost:33060+ ssl  SQL > CREATE DATABASE movie_reviews;
-Query OK, 1 row affected (0.1047 sec)
- MySQL  localhost:33060+ ssl  SQL > USE movie_reviews;
-Default schema set to `movie_reviews`.
-Fetching global names, object names from `movie_reviews` for auto-completion... Press ^C to stop.
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > CREATE TABLE movies (
-                                                ->     movie_id INT AUTO_INCREMENT PRIMARY KEY,
-                                                ->     title VARCHAR(255) NOT NULL,
-                                                ->     genre VARCHAR(100),
-                                                ->     release_date DATE,
-                                                ->     director VARCHAR(100)
-                                                -> );
-Query OK, 0 rows affected (0.5393 sec)
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > CREATE TABLE users (
-                                                ->     user_id INT AUTO_INCREMENT PRIMARY KEY,
-                                                ->     username VARCHAR(100) NOT NULL UNIQUE,
-                                                ->     email VARCHAR(255) NOT NULL UNIQUE,
-                                                ->     password VARCHAR(255) NOT NULL
-                                                -> );
-Query OK, 0 rows affected (0.0914 sec)
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > CREATE TABLE reviews (
-                                                ->     review_id INT AUTO_INCREMENT PRIMARY KEY,
-                                                ->     movie_id INT,
-                                                ->     user_id INT,
-                                                ->     rating INT CHECK (rating BETWEEN 1 AND 10),
-                                                ->     comment TEXT,
-                                                ->     review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                                                ->     FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
-                                                ->     FOREIGN KEY (user_id) REFERENCES users(user_id)
-                                                -> );
-Query OK, 0 rows affected (0.1311 sec)
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > INSERT INTO movies (title, genre, release_date, director) VALUES
-                                                -> ('Inception', 'Sci-Fi', '2010-07-16', 'Christopher Nolan'),
-                                                -> ('The Godfather', 'Crime', '1972-03-24', 'Francis Ford Coppola');
-Query OK, 2 rows affected (0.0375 sec)
+CREATE DATABASE movie_reviews;
 
-Records: 2  Duplicates: 0  Warnings: 0
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > INSERT INTO users (username, email, password) VALUES
-                                                -> ('john_doe', 'john@example.com', 'password123'),
-                                                -> ('jane_doe', 'jane@example.com', 'password456');
-Query OK, 2 rows affected (0.0378 sec)
+USE movie_reviews;
 
-Records: 2  Duplicates: 0  Warnings: 0
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > INSERT INTO reviews (movie_id, user_id, rating, comment) VALUES
-                                                -> (1, 1, 9, 'Amazing movie with a mind-bending plot!'),
-                                                -> (2, 2, 10, 'A masterpiece of cinema. Timeless classic.');
-Query OK, 2 rows affected (0.0498 sec)
+CREATE TABLE movies (
+    movie_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    genre VARCHAR(100),
+    release_date DATE,
+    director VARCHAR(100)
+);
 
-Records: 2  Duplicates: 0  Warnings: 0
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > SELECT * FROM movies;
-+----------+---------------+--------+--------------+----------------------+
-| movie_id | title         | genre  | release_date | director             |
-+----------+---------------+--------+--------------+----------------------+
-|        1 | Inception     | Sci-Fi | 2010-07-16   | Christopher Nolan    |
-|        2 | The Godfather | Crime  | 1972-03-24   | Francis Ford Coppola |
-+----------+---------------+--------+--------------+----------------------+
-2 rows in set (0.0009 sec)
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > SELECT * FROM users;
-+---------+----------+------------------+-------------+
-| user_id | username | email            | password    |
-+---------+----------+------------------+-------------+
-|       1 | john_doe | john@example.com | password123 |
-|       2 | jane_doe | jane@example.com | password456 |
-+---------+----------+------------------+-------------+
-2 rows in set (0.0004 sec)
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > SELECT * FROM reviews;
-+-----------+----------+---------+--------+--------------------------------------------+---------------------+
-| review_id | movie_id | user_id | rating | comment                                    | review_date         |
-+-----------+----------+---------+--------+--------------------------------------------+---------------------+
-|         1 |        1 |       1 |      9 | Amazing movie with a mind-bending plot!    | 2024-07-19 20:15:52 |
-|         2 |        2 |       2 |     10 | A masterpiece of cinema. Timeless classic. | 2024-07-19 20:15:52 |
-+-----------+----------+---------+--------+--------------------------------------------+---------------------+
-2 rows in set (0.0004 sec)
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
-Query OK, 0 rows affected (0.3962 sec)
- MySQL  localhost:33060+ ssl  movie_reviews  SQL > FLUSH PRIVILEGES;
-Query OK, 0 rows affected (0.0449 sec)
- MySQL  localhost:33060+ ssl  movie_reviews  SQL >
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE reviews (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+    movie_id INT,
+    user_id INT,
+    rating INT CHECK (rating BETWEEN 1 AND 10),
+    comment TEXT,
+    review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+INSERT INTO movies (title, genre, release_date, director) VALUES 
+('Inception', 'Sci-Fi', '2010-07-16', 'Christopher Nolan'),
+('The Godfather', 'Crime', '1972-03-24', 'Francis Ford Coppola');
+
+INSERT INTO users (username, email, password) VALUES 
+('john_doe', 'john@example.com', 'password123'),
+('jane_doe', 'jane@example.com', 'password456');
+
+INSERT INTO reviews (movie_id, user_id, rating, comment) VALUES 
+(1, 1, 9, 'Amazing movie with a mind-bending plot!'),
+(2, 2, 10, 'A masterpiece of cinema. Timeless classic.');
