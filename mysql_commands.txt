@@ -1,0 +1,61 @@
+
+-- Initial Setup Commands
+
+-- Create Database
+CREATE DATABASE movie_reviews;
+
+-- Use the Database
+USE movie_reviews;
+
+-- Create Tables
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    is_admin BOOLEAN DEFAULT FALSE,
+    email VARCHAR(255)
+);
+
+CREATE TABLE movies (
+    movie_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    genre VARCHAR(255),
+    release_date DATE,
+    director VARCHAR(255),
+    poster_url VARCHAR(255)
+);
+
+CREATE TABLE reviews (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+    movie_id INT,
+    user_id INT,
+    rating INT,
+    comment TEXT,
+    review_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (movie_id) REFERENCES movies(movie_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- Insert Admin User
+INSERT INTO users (username, password, is_admin) VALUES ('admin', 'admin123', TRUE);
+
+-- Commands for Clearing Data
+
+-- Delete All Reviews
+DELETE FROM reviews;
+
+-- Delete All Movies
+DELETE FROM movies;
+
+-- Reset Auto-Increment Counters
+ALTER TABLE reviews AUTO_INCREMENT = 1;
+ALTER TABLE movies AUTO_INCREMENT = 1;
+
+-- Insert Test Data (Optional)
+INSERT INTO movies (title, genre, release_date, director, poster_url) VALUES 
+('Inception', 'Sci-Fi', '2010-07-16', 'Christopher Nolan', 'https://image.tmdb.org/t/p/w500/path_to_poster'),
+('The Godfather', 'Crime', '1972-03-24', 'Francis Ford Coppola', 'https://image.tmdb.org/t/p/w500/path_to_poster');
+
+INSERT INTO reviews (movie_id, user_id, rating, comment) VALUES 
+(1, 1, 9, 'Amazing movie with a mind-bending plot!'),
+(2, 2, 10, 'A masterpiece of cinema. Timeless classic.');
